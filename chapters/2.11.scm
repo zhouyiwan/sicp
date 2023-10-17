@@ -19,6 +19,4 @@
           ((and (and (< xl 0) (> xh 0)) (< yh 0)) (make-interval ((* xh yl) (* xl yl))))
           ((and (and (< xl 0) (> xh 0)) (> yl 0)) (make-interval ((* xl yh) (* xh yh))))
           (else (make-interval ((* (min xl yl) (max xh yh))
-                                (if (> (- (+ xh yh) (+ xl yl)) 0)
-                                    (* xh yh)
-                                    (* xl yl))))))))
+                                (max (* xl yl) (* xh yh))))))))
