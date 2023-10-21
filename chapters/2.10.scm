@@ -20,4 +20,4 @@
   (cond ((and (< (lower-bound y) 0)
               (>= (upper-bound y) 0))
          (display "报错"))
-        (else (inner-mul-interval))))
+        (else (inner-div-interval))))

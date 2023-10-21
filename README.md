@@ -9,4 +9,8 @@ sicp学习之路
 
 sicp在讲什么和能学到什么？：[向热爱计算机科学的你推荐SICP（2019年版） 《计算机程序的构造和解释》改变你的编程思维](https://mp.weixin.qq.com/s/2sd3gEpA_S306NAIkgbPNg)
 
-sicp的学习资料：[Learning-SICP](https://github.com/DeathKing/Learning-SICP)
+sicp的学习资料：
+
+[Learning-SICP](https://github.com/DeathKing/Learning-SICP)
+
+[计算机程序的构造与解释]https://matrix-sicp.readthedocs.io/en/latest/index.html
