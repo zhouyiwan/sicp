@@ -35,18 +35,23 @@
                    (else (inner-safe? (- k 1) (cdr positions) target))))))
   (inner-safe? (- outerk 1) (cdr positions) (car positions)))
 
+(define (append seq1 seq2)
+  (accumulate cons seq2 seq1))
+
 ; 首先定义棋子摆放在棋盘上的格式(((1 2) (2 1)))这是一种
+; 当k-1个列都准备好了，针对这k-1列排列的每种可能，加上(1, k), (2, k), (3, k), ...个可能
+; 过滤这些可能留下所有满足条件的作为下一次的入参
 (define (queens board-size)
   (define (queen-cols k)
     (if (= k 0)
         (list empty-board)
-        (filter 
+        (filter
           (lambda (positions) (safe? k positions))
           (flat-map
-            (lambda (rest-of-queens) 
-              (map (lambda (row) (cons (list row k) rest-of-queens))
+            (lambda (rest-of-queens)
+              (map (lambda (new-row) (cons (list new-row k) rest-of-queens))
                     (enumerate-interval 1 board-size)))
             (queen-cols (- k 1))))))
   (queen-cols board-size))
 
-(display (length (queens 8)))
+(display (length (queens 8))); 92
