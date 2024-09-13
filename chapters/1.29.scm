@@ -7,11 +7,13 @@
   (define (next x) (+ 1 x))
   (define (fn k)
           (if (or (= 0 k) (= k n))
-              (+ a (* k h))
-              (* (if (even? k) 2 4) (+ a (* k h)))))
+              (f (+ a (* k h)))
+              (* (if (even? k) 2 4) (f (+ a (* k h))))))
   (* (/ h 3.0)
      (sum fn 0 next n)))
 
 (define (cube x) (* x x x))
 
-(display (xps cube 0 1 100))
+(display (xps cube 0 1 100)) ; 0.25
+(newline)
+(display (xps cube 0 1 100)) ; 0.25
