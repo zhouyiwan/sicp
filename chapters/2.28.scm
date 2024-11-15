@@ -11,7 +11,7 @@
       (else (inner-fringe (car tree) (inner-fringe (cdr tree) res)))))
   (inner-fringe tree nil))
 
-; (display (fringe my-tree))
+(display (fringe my-tree))
 
 ; (define (fringe2 tree)
 ;   (define (inner-fringe2 tree res)
@@ -28,8 +28,6 @@
       (cons (car items) (inner-abc (cdr items)))))
   (inner-abc items))
 
-5
-
 (define (abc3 items)
   (define (inner-abc items pick)
     (cond ((null? items) nil)
@@ -38,7 +36,7 @@
       ))
   (inner-abc items (lambda (res) res) ))
 
-(display (abc3 (list 10 1 2 3)))
+; (display (abc3 (list 10 1 2 3)))
 
 (define (abc2 items)
   (define (inner-abc items res)

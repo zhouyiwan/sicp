@@ -1,1 +1,0 @@
-(display (girth rect))

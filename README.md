@@ -11,6 +11,8 @@ sicp在讲什么和能学到什么？：[向热爱计算机科学的你推荐SIC
 
 sicp的学习资料：
 
+[SICP 解题集](https://sicp.readthedocs.io/en/latest/)
+
 [Learning-SICP](https://github.com/DeathKing/Learning-SICP)
 
 [计算机程序的构造与解释]https://matrix-sicp.readthedocs.io/en/latest/index.html

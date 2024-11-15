@@ -21,3 +21,5 @@
               (>= (upper-bound y) 0))
          (display "报错"))
         (else (inner-div-interval))))
+
+(display (div-interval (make-interval 1 2) (make-interval 1 2)))
